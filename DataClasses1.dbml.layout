@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/LibraryDbContext" />
+  <nestedChildShapes>
+    <classShape Id="3e372da9-d420-45f3-8f1a-57cdc69104f5" absoluteBounds="2.25, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LibraryDbContext/Author" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f81e6f1a-4231-4ea8-a25d-7eec3b288b2b" absoluteBounds="2.265, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7215ba2-b610-4780-b77b-0533dedcece5" absoluteBounds="6.375, 4.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LibraryDbContext/Book" />
+      <nestedChildShapes>
+        <elementListCompartment Id="809e31c6-a5f6-441a-bab7-a34aee5d14ae" absoluteBounds="6.39, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 4.78929768880208); (4.25 : 4.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LibraryDbContext/Book/Book_Author" />
+      <nodes>
+        <classShapeMoniker Id="e7215ba2-b610-4780-b77b-0533dedcece5" />
+        <classShapeMoniker Id="3e372da9-d420-45f3-8f1a-57cdc69104f5" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="16e6f0ee-f0c0-4691-adcc-92442c16713d" absoluteBounds="5.5, 2.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LibraryDbContext/Country" />
+      <nestedChildShapes>
+        <elementListCompartment Id="98452cde-6e24-406f-a261-9e8dba4a9339" absoluteBounds="5.515, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.25 : 3.75); (3.25 : 3.0624995); (5.5 : 3.0624995)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LibraryDbContext/Author/Author_Country" />
+      <nodes>
+        <classShapeMoniker Id="3e372da9-d420-45f3-8f1a-57cdc69104f5" />
+        <classShapeMoniker Id="16e6f0ee-f0c0-4691-adcc-92442c16713d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
