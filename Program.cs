@@ -60,13 +60,18 @@ namespace hw_4
         //task 7
         public IEnumerable<Author> GetAuthorLowestBooks()
         {
-            var book = context.Authors.Where(s => context.Authors.Count(s => s.BookId));
-            return book;
+            var author = (from a in context.Authors
+                          join b in context.Books on a.BookId equals b.Id
+                          select a.BookId);
+            return author.Min();
         }
         //Task 8
         public IEnumerable<Country> GetMaxAuthors()
         {
-
+            var ctr = (from c in context.Countries
+                          join a in context.Authors on c.AuthorId equals a.Id
+                          select c.AuthorId);
+            return ctr.Max();
         }
 
         class Program
